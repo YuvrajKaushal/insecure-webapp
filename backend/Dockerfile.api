@@ -8,7 +8,7 @@ COPY pom.xml .
 RUN mvn -B clean package spring-boot:repackage
 RUN tree
 
-FROM python:3.9.10-slim-bullseye
+FROM python:3.13.0b2-slim-bullseye
 
 RUN apt-get update && \
     apt-get install -y openjdk-17-jre figlet netcat telnet tree
